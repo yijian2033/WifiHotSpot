@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    tools:context="com.conqueror.wifihotspot.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热点账号："/>
+
+            <EditText
+                android:id="@+id/et_ssid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <CheckBox
+            android:visibility="gone"
+            android:id="@+id/cb_setpsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否设置连接密码"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热点密码："/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入至少八位密码"
+                android:inputType="textPassword"
+                />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_showpsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否显示密码"
+    />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="send"
+        android:text="连接设备"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="WIFI热点开启或者关闭："/>
+
+    <Switch
+        android:id="@+id/stc_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/track"
+        android:switchMinWidth="20dp"
+        android:textOff="关闭"
+        android:textOn="开启"
+        android:thumb="@drawable/thumb"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="连接的设备："/>
+
+    <ListView
+        android:id="@+id/lv_device"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
